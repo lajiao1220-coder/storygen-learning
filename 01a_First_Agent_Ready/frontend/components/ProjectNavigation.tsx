@@ -1,0 +1,2 @@
+import Link from "next/link"; import {projects} from "@/data/projects";
+export default function ProjectNavigation({slug}:{slug:string}){const i=projects.findIndex(p=>p.slug===slug),prev=projects[(i-1+projects.length)%projects.length],next=projects[(i+1)%projects.length];return <nav className="project-nav"><Link href={`/projects/${prev.slug}`}><small>PREVIOUS PROJECT</small><span>← {prev.titleCN}</span></Link><Link href="/projects">ALL PROJECTS</Link><Link href={`/projects/${next.slug}`} className="next"><small>NEXT PROJECT</small><span>{next.titleCN} →</span></Link></nav>}

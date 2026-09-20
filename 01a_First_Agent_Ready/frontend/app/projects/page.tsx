@@ -1,0 +1,2 @@
+import type {Metadata} from "next"; import Header from "@/components/Header"; import Footer from "@/components/Footer"; import ProjectGrid from "@/components/ProjectGrid";
+export const metadata:Metadata={title:"项目 | 步容空间",description:"步容空间设计项目索引"}; export default function Projects(){return <><Header/><main className="page projects-page"><div className="page-kicker">SELECTED PROJECTS <span>空间在使用中，才真正开始发生。</span></div><ProjectGrid/></main><Footer/></>}
